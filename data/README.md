@@ -1,83 +1,46 @@
-# ANOVYX AI
-### AI-Driven Intelligent Fraud & Anomaly Detection System
+# Dataset Instructions
 
-**Detect the unusual. Prevent the unthinkable.**
+## PaySim Financial Transaction Dataset
 
-## About the Project
+ANOVYX AI uses the PaySim mobile money transaction dataset for financial fraud detection experiments.
 
-ANOVYX AI is our B.Tech final-year capstone project. The main idea is to develop a system that can identify potentially fraudulent financial transactions using machine learning.
+### Dataset Source
 
-As online transactions continue to increase, detecting suspicious activities has become an important challenge. Traditional systems mostly depend on predefined rules, which may not always identify new or unusual fraud patterns.
+https://www.kaggle.com/datasets/ealaxi/paysim1
 
-Through this project, we are trying to build a system that studies transaction details, detects suspicious behaviour and displays the prediction through a simple dashboard.
+### Download Instructions
 
-## What we are trying to achieve
+1. Open the dataset link.
+2. Download the PaySim dataset.
+3. Extract the downloaded file.
+4. Place the CSV file inside this `data` folder.
+5. Confirm that the dataset contains the required transaction and fraud-label columns.
 
-- Detect potentially fraudulent financial transactions.
-- Identify unusual transaction patterns.
-- Study different machine learning algorithms for fraud detection.
-- Reduce incorrect fraud alerts as much as possible.
-- Display transaction analysis through a web dashboard.
+### Expected Dataset File
 
-## How the system works
+The commonly distributed PaySim CSV filename is:
 
-The current project follows a basic machine learning workflow:
+PS_20174392719_1491204439457_log.csv
 
-1. Load the transaction dataset.
-2. Clean and prepare the data.
-3. Select the relevant transaction features.
-4. Train the machine learning model.
-5. Test the model using unseen transactions.
-6. Display the prediction and evaluation results on the dashboard.
+### Important Columns
 
-## Algorithms
+- step
+- type
+- amount
+- oldbalanceOrg
+- newbalanceOrig
+- oldbalanceDest
+- newbalanceDest
+- isFraud
 
-We initially worked with Random Forest for transaction classification.
+### Dataset Handling
 
-As part of the improvements suggested during our project review, we are also exploring Isolation Forest for identifying unusual transaction behaviour.
+- Do not upload large raw datasets unnecessarily.
+- Do not modify the original dataset.
+- Perform preprocessing through Python scripts.
+- Keep the original fraud labels for supervised evaluation.
+- Avoid using the test dataset for model tuning.
 
-We plan to compare both models and study whether combining them can improve the overall detection process.
+### Dataset Information
 
-## Dataset
-
-For the initial prototype, we used synthetically generated transaction data to test the working of the application.
-
-We are now moving towards the PaySim mobile money transaction dataset for further experiments.
-
-Dataset link: https://www.kaggle.com/datasets/ealaxi/paysim1
-
-PaySim is a simulated transaction dataset containing both legitimate and fraudulent transactions. It provides features such as transaction amount, transaction type and account balances.
-
-## Technologies Used
-
-- Python
-- Pandas and NumPy
-- Scikit-learn
-- Streamlit
-- Matplotlib and Seaborn
-
-## Current Progress
-
-The first version of the prototype includes:
-
-- A working Streamlit dashboard.
-- Transaction analysis interface.
-- Initial Random Forest implementation.
-- Basic fraud prediction.
-- Model performance display.
-
-We are currently working on improving the dataset, studying anomaly detection algorithms and making the model evaluation more reliable.
-
-## Future Improvements
-
-Some features we would like to work on include:
-
-- Improving fraud detection performance.
-- Combining supervised learning and anomaly detection.
-- Adding better explanations for suspicious predictions.
-- Maintaining a record of analysed transactions.
-- Exploring real-time transaction monitoring.
-
-## Note
-
-This project is being developed for academic purposes as part of our B.Tech final-year capstone project. The current prototype is experimental and is not intended to make actual banking decisions.
+PaySim is a simulated mobile-money dataset. Its results should not automatically be treated as equivalent to performance on real banking transactions.
