@@ -1,6 +1,6 @@
 # ANOVYX AI
 ### AI-Driven Intelligent Fraud & Anomaly Detection System
----
+
 **Detect the unusual. Prevent the unthinkable.**
 
 ## About the Project
