@@ -1,128 +1,83 @@
 # ANOVYX AI
 ### AI-Driven Intelligent Fraud & Anomaly Detection System
+---
+**Detect the unusual. Prevent the unthinkable.**
 
-**Tagline:** Detect the unusual. Prevent the unthinkable.
+## About the Project
 
-## 1. Project Overview
+ANOVYX AI is our B.Tech final-year capstone project. The main idea is to develop a system that can identify potentially fraudulent financial transactions using machine learning.
 
-ANOVYX AI is a machine learning-based financial fraud detection system designed to identify suspicious transactions and unusual financial activities.
+As online transactions continue to increase, detecting suspicious activities has become an important challenge. Traditional systems mostly depend on predefined rules, which may not always identify new or unusual fraud patterns.
 
-The project aims to address the limitations of conventional fraud detection systems, particularly their dependence on fixed rules, difficulty detecting unusual transaction patterns, and challenges associated with highly imbalanced financial datasets.
+Through this project, we are trying to build a system that studies transaction details, detects suspicious behaviour and displays the prediction through a simple dashboard.
 
-The proposed system combines supervised machine learning with anomaly detection to improve fraud identification and reduce unnecessary false alerts.
+## What we are trying to achieve
 
-## 2. Problem Statement
+- Detect potentially fraudulent financial transactions.
+- Identify unusual transaction patterns.
+- Study different machine learning algorithms for fraud detection.
+- Reduce incorrect fraud alerts as much as possible.
+- Display transaction analysis through a web dashboard.
 
-Digital financial transactions are increasing rapidly, creating opportunities for fraudulent activities. Traditional rule-based systems may fail to identify new and evolving fraud patterns.
+## How the system works
 
-Machine learning models can improve fraud detection, but financial datasets often contain a very small proportion of fraudulent transactions. This class imbalance can cause a model to classify most transactions correctly while failing to identify actual fraud.
+The current project follows a basic machine learning workflow:
 
-ANOVYX AI aims to develop a system that evaluates transaction characteristics, identifies suspicious patterns, and provides a fraud risk assessment.
+1. Load the transaction dataset.
+2. Clean and prepare the data.
+3. Select the relevant transaction features.
+4. Train the machine learning model.
+5. Test the model using unseen transactions.
+6. Display the prediction and evaluation results on the dashboard.
 
-## 3. Project Objectives
+## Algorithms
 
-- Develop a machine learning-based financial fraud detection system.
-- Study and compare supervised and unsupervised learning algorithms.
-- Investigate the effect of class imbalance on fraud detection.
-- Explore a hybrid Random Forest and Isolation Forest approach.
-- Evaluate performance using appropriate classification metrics.
-- Develop a Streamlit-based interface for transaction risk analysis.
+We initially worked with Random Forest for transaction classification.
 
-## 4. Proposed Methodology
+As part of the improvements suggested during our project review, we are also exploring Isolation Forest for identifying unusual transaction behaviour.
 
-The proposed workflow consists of:
+We plan to compare both models and study whether combining them can improve the overall detection process.
 
-1. Dataset collection.
-2. Data cleaning and preprocessing.
-3. Exploratory data analysis.
-4. Feature engineering.
-5. Training a supervised Random Forest baseline.
-6. Training an Isolation Forest anomaly detector.
-7. Combining model outputs in a hybrid approach.
-8. Decision-threshold selection using validation data.
-9. Evaluation on unseen test data.
-10. Integration with the ANOVYX AI dashboard.
+## Dataset
 
-## 5. Dataset
+For the initial prototype, we used synthetically generated transaction data to test the working of the application.
 
-The project plans to use the PaySim mobile money transaction dataset.
+We are now moving towards the PaySim mobile money transaction dataset for further experiments.
 
-PaySim contains simulated financial transactions with legitimate and fraudulent transaction labels. It provides transaction attributes such as transaction type, amount, account balances, and fraud labels.
+Dataset link: https://www.kaggle.com/datasets/ealaxi/paysim1
 
-Dataset source:
-https://www.kaggle.com/datasets/ealaxi/paysim1
+PaySim is a simulated transaction dataset containing both legitimate and fraudulent transactions. It provides features such as transaction amount, transaction type and account balances.
 
-The dataset will be examined for class imbalance, missing values, duplicate records, feature relevance, and possible data leakage before model training.
-
-## 6. Algorithms
-
-### Random Forest
-A supervised ensemble learning algorithm that combines multiple decision trees to classify transactions as legitimate or fraudulent.
-
-### Isolation Forest
-An unsupervised anomaly detection algorithm that identifies unusual observations by isolating them through random feature and split selection.
-
-### Proposed Hybrid Approach
-The proposed approach investigates combining Random Forest fraud probabilities with Isolation Forest anomaly scores.
-
-The purpose is to evaluate whether supervised classification and anomaly detection provide complementary information for identifying suspicious financial transactions.
-
-## 7. Model Evaluation
-
-The system will be evaluated using:
-
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Precision-Recall AUC (PR-AUC)
-- ROC-AUC
-- Confusion Matrix
-- False Positive Rate
-
-Because fraudulent transactions are relatively rare, accuracy alone will not be treated as sufficient evidence of model performance.
-
-## 8. Current Development Status
-
-### Phase 1 – Baseline Prototype
-- Streamlit dashboard developed.
-- Synthetic transaction generation implemented.
-- Random Forest baseline implemented.
-- Initial model evaluation and confusion matrix generated.
-- Transaction risk prediction interface developed.
-
-### Phase 2 – Dataset and Hybrid Model Improvement
-- Integrate a suitable financial fraud benchmark dataset.
-- Train and evaluate the Isolation Forest model.
-- Investigate the hybrid Random Forest and Isolation Forest approach.
-- Tune model parameters and decision thresholds.
-- Compare baseline and hybrid performance.
-
-### Phase 3 – Future Development
-- Explainable AI using SHAP.
-- Real-time transaction monitoring.
-- Alert logging and investigation workflow.
-- Data drift monitoring.
-- Scalable deployment.
-
-## 9. Research Gap
-
-Existing fraud detection approaches face challenges involving severe class imbalance, evolving fraud patterns, false-positive alerts, and limited interpretability.
-
-This project investigates whether combining supervised classification with unsupervised anomaly detection can improve the identification of suspicious transactions while maintaining an acceptable false-positive rate.
-
-The effectiveness of this approach will be established through comparative experiments rather than assumed in advance.
-
-## 10. Technology Stack
+## Technologies Used
 
 - Python
-- Pandas
-- NumPy
+- Pandas and NumPy
 - Scikit-learn
-- Matplotlib
-- Seaborn
 - Streamlit
+- Matplotlib and Seaborn
 
-## 11. Project Disclaimer
+## Current Progress
 
-ANOVYX AI is an academic prototype. Its predictions are experimental risk assessments and should not be treated as definitive proof of financial fraud or used as the sole basis for real financial decisions.
+The first version of the prototype includes:
+
+- A working Streamlit dashboard.
+- Transaction analysis interface.
+- Initial Random Forest implementation.
+- Basic fraud prediction.
+- Model performance display.
+
+We are currently working on improving the dataset, studying anomaly detection algorithms and making the model evaluation more reliable.
+
+## Future Improvements
+
+Some features we would like to work on include:
+
+- Improving fraud detection performance.
+- Combining supervised learning and anomaly detection.
+- Adding better explanations for suspicious predictions.
+- Maintaining a record of analysed transactions.
+- Exploring real-time transaction monitoring.
+
+## Note
+
+This project is being developed for academic purposes as part of our B.Tech final-year capstone project. The current prototype is experimental and is not intended to make actual banking decisions.
